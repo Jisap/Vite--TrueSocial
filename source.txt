@@ -1,0 +1,159 @@
+================= Theme Button =================
+
+/**
+ * The lime pill button repeated across the site ("Get A Quote", "Let's
+ * Talk", form submits, etc). Renders as an <a> or a <button> and reproduces
+ * the original theme's two-layer clip-path "circle reveal" hover effect
+ * with Tailwind's before/after + arbitrary-value utilities instead of
+ * hand-written CSS.
+ *
+ * variant="default": lime background, white circle reveals on hover.
+ * variant="dark": used only for the CTA sitting in the header, where the
+ * reveal is ink-colored and the label turns white once revealed.
+ */
+
+before:absolute before:inset-0 before:-z-10 before:[clip-path:circle(0%_at_50%_50%)] before:transition-[clip-path] before:duration-[800ms] before:ease-[cubic-bezier(0,0.96,0.58,1.1)] after:absolute after:inset-0 after:-z-10 after:[clip-path:circle(0%_at_50%_50%)] after:transition-[clip-path] after:duration-[800ms] after:ease-[cubic-bezier(0,0.96,0.58,1.1)] hover:before:[clip-path:circle(100%_at_50%_50%)] hover:before:duration-[4000ms] hover:before:delay-200 hover:after:[clip-path:circle(100%_at_50%_50%)] hover:after:duration-[4000ms]
+
+================= useScrollState =================
+
+/**
+ * Tracks page scroll position and returns the two boolean flags the
+ * original script.js derived from it:
+ *  - isSticky: header should switch to its fixed/condensed state (>300px)
+ *  - showScrollTop: the "back to top" button should be visible (>500px)
+ * Thresholds are ported directly from assets/js/script.js.
+ */
+
+================================== Hero Section =============================================================
+
+=================== Reveal.jsx ====================
+
+/**
+ * Scroll-reveal wrapper. Replaces the original theme's two separate,
+ * overlapping systems (WOW.js "wow fadeInLeft/Up/Right" classes on
+ * cards, and the AOS "data-aos" attributes on the hero) with one
+ * IntersectionObserver-driven component reusable anywhere.
+ *
+ * Renders children immediately (opacity 1) until JS decides to animate,
+ * so content is never hidden from users without JS or from crawlers.
+ */
+
+===================== uselnView.js ====================
+
+/**
+ * Returns a ref to attach to an element and a boolean that flips to
+ * `true` the first time that element enters the viewport. Used to
+ * trigger scroll-reveal animations and count-up numbers exactly once,
+ * replacing the original theme's jquery.appear + WOW.js combination.
+ */
+
+We believe that the surest measure of success is when our partners with us more than half. It&apos;s more than just the visuals. We&apos;re here to support your growth.
+
+======================== Counter.jsx =================
+
+/**
+ * A single animated statistic number, e.g. "35" -> counts up, with an
+ * optional suffix rendered separately ("k+", "+") so it never animates.
+ *
+ * `className` is applied to both the number and its suffix, since every
+ * caller in this design gives them identical typography.
+ */
+
+=================== useCountup.js =========================
+
+/**
+ * Counts up from 0 to `target` once the returned ref scrolls into view.
+ * Consolidates the original theme's two separate mechanisms (an instant
+ * "odometer" reveal via jquery.appear, and a jQuery.animate count-up for
+ * ".count-text") into one accessible, dependency-free implementation.
+ */
+
+==================================== Explore Section =====================================================
+
+=============== CircularText.jsx ===============
+
+/**
+ * Renders text bent around a circle and spinning continuously, using
+ * native SVG <textPath> instead of jquery.circleType.js. The rotation
+ * keyframe (24s linear infinite) is ported directly from the original
+ * ".rotate-me" animation so the spin speed is unchanged.
+ */
+
+============== VideoModal.jsx ============
+
+/**
+ * Minimal accessible lightbox for the YouTube "play video" links.
+ * Replaces jquery.magnific-popup (type: "iframe"): closes on Escape or
+ * backdrop click, and only mounts the iframe while open so no video
+ * loads (or keeps playing) in the background.
+ */
+
+https://www.youtube.com/embed/${id}?autoplay=1
+
+================================== About Section ===========================================================
+
+We collaborate with a few disability service providers to create inclusive goods that meet their requirements.
+
+Years Of Experience
+
+Established in 1995, TrueSocial has been a leading force in the digital landscape for over two decades. We're a passionate team of designers,
+
+We worked with global largest brands
+
+===================================== Services Section ========================================================
+
+=================== SectionTitle.jsx ============ 
+
+/**
+ * The "eyebrow tagline + big heading" pattern repeated at the top of
+ * every major section in the original template. Consolidating it here
+ * removes ~9 copies of identical markup.
+ */
+
+Empowering Brands Through Strategic Digital Services
+
+Established in 1995, TrueSocial has been a leading force in the digital landscape for over two decades. We&apos;re a passionate team of designers,
+
+======================================== Portfolio Section ======================================================
+
+Exhibiting Outstanding Creativity
+
+Established in 1995, TrueSocial has been leading force in the digital landscape for over two decades. We&apos;re a passionate
+
+
+================================================== Why Choose Section =========================================== 
+
+Driving Digital Success With Strategy Design
+
+We believe that the surest measure of success is when our partners with us more than half. It&apos;s more than just the visuals.
+
+Conduct thorough market research to the fast target audience
+
+We believe that the surest measure of success is when our partners with us more than half. It&apos;s more than just the visuals. We&apos;re here to support your growth.
+
+We believe that the surest measure of success is when our partners with us more than half. It&apos;s more than just the visuals.
+
+Conduct thorough market research to the fast target audience behaviours.
+
+======================================== Testimonial Section ==================================================
+
+Hear Real Stories from Happy Clients
+
+================================================ Contact Section ===============================================
+
+We'd Love To Hear From You
+
+Thanks for reaching out — we&apos;ll be in touch shortly.
+
+Didn&apos;t find what you were trying to find? Write to us at.
+
+================================================= Footer Section ==============================================
+
+We shift you from today&apos;s reality to tomorrow&apos;spotential, ensuring
+
+============================================= Scroll To Top Button.jsx =====================
+
+/**
+ * "Back to top" button, visible once the page has scrolled past 500px
+ * (same threshold as the original script.js).
+ */
