@@ -1,4 +1,6 @@
 import { navLinks } from "../../data/navLinks"
+import ThemeButton from "../common/ThemeButton"
+
 
 const NavContent = ({ activeId, onNavClick }) => {
   return (
@@ -43,6 +45,13 @@ const NavContent = ({ activeId, onNavClick }) => {
             )
           })}
         </ul>
+      </div>
+
+      <div className="hidden sm:block">
+        <ThemeButton hrf="#contact" variant="dark">
+          Get A Quote
+          <span className="icon-arrow-up-right" aria-hidden="true"></span>
+        </ThemeButton>
       </div>
     </div>
   )
