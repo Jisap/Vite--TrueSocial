@@ -15,16 +15,16 @@ export const useScrollSpy = (sectionIds = [], offset = 117) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
+      const scrollY = window.scrollY;                               // Captura el scroll vertical.
       let current = activeId;
 
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const top = el.offsetTop - offset;
-          const height = el.offsetHeight;
-          if (scrollY >= top && scrollY < top + height) {
-            current = id;
+      for (const id of sectionIds) {                                  // Itera sobre los IDs.
+        const el = document.getElementById(id);                       // Obtiene el ID de cada sección
+        if (el) {                                                     // Si el ID existe.
+          const top = el.offsetTop - offset;                          // Calcula la posición superior con el offset.
+          const height = el.offsetHeight;                             // Calcula la altura del elemento.
+          if (scrollY >= top && scrollY < top + height) {             // Si el scroll está entre el top y el bottom.
+            current = id;                                             // Actualiza el ID activo.
           }
         }
       }

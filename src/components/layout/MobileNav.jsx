@@ -9,7 +9,7 @@ const MobileNav = ({ open, onClose }) => {
 
     useEffect(() => {
         document.body.classList.toggle("locked", open);         // Añade la clase locked si esta abierto
-        return () => document.body.classList.remove("locked")    // La quita al limpiar
+        return () => document.body.classList.remove("locked")   // La quita al limpiar
     }, [open]);
 
     useEffect(() => {
