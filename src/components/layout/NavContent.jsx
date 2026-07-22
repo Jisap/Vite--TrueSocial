@@ -1,4 +1,4 @@
-import React from 'react'
+import { navLinks } from "../../data/navLinks"
 
 const NavContent = ({ activeId, onNavClick }) => {
   return (
@@ -21,6 +21,28 @@ const NavContent = ({ activeId, onNavClick }) => {
         >
           <i className='fa fa-bars' aria-hidden="true"></i>
         </button>
+
+        <ul className='m-0 hidden list-none items-center p-0 xl:flex'>
+          {navLinks.map((link) => {
+            const isCurrent = activeId === link.href.slice(1);
+            return (
+              <li key={link.href} className="relative ml-10 first:ml-0 py-[43px]">
+                <a
+                  href={link.href}
+                  className={`
+                    relative flex items-center font-sans text-base font-medium capitalize leading-5
+                    text-[#CFF747] after:absolute after:-bottom-[3px] after:left-0 after:right-0 after:h-[2px]
+                    after:origin-left after:scale-x-0 after:bg-ink after:transition-transform after:duration-500
+                    after:content-[""] hover:after:scale-x-100
+                    ${isCurrent ? "after:scale-x-100" : ""}
+                  `}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </div>
   )
