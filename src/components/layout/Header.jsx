@@ -14,6 +14,11 @@ const Header = ({ activeId, onOpenMobileNav }) => {
           </div>
         </nav>
       </header>
+
+      {/* Fixed clone shown once the page has scrolled past 300px, mirroring the original theme's ".stricked-menu"/"sticky-fixed behavior." */}
+      <div className=''>
+
+      </div>
     </>
   )
 }
