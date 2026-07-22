@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from './components/layout/Header'
 
 export default function App() {
   return (
     <>
-      <h1>Welcome To Uicode</h1>
+      <div className='relative mx-auto w-full min-w-[300px] overflow-hidden'>
+        <Header />
+      </div>
     </>
   )
 }
