@@ -48,7 +48,7 @@ const NavContent = ({ activeId, onNavClick }) => {
       </div>
 
       <div className="hidden sm:block">
-        <ThemeButton hrf="#contact" variant="dark">
+        <ThemeButton href="#contact" variant="dark">
           Get A Quote
           <span className="icon-arrow-up-right" aria-hidden="true"></span>
         </ThemeButton>
