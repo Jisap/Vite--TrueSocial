@@ -15,6 +15,7 @@ const NavContent = ({ activeId, onNavClick }) => {
       </div>
 
       <div className='flex items-center gap-6'>
+        {/* Botón de menu para móviles */}
         <button
           type="button"
           onClick={onNavClick}
