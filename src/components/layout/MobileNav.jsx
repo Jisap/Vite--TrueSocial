@@ -23,15 +23,13 @@ const MobileNav = ({ open, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[999] transition-all duration-300 ease-in-out ${
-        open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-      }`}
+      className={`fixed inset-0 z-[999] transition-all duration-300 ease-in-out ${open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
     >
       {/* Backdrop overlay */}
       <div
-        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ease-in-out ${
-          open ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ease-in-out ${open ? "opacity-100" : "opacity-0"
+          }`}
         onClick={onClose}
         aria-hidden="true"
       />
@@ -39,8 +37,7 @@ const MobileNav = ({ open, onClose }) => {
       {/* Drawer content */}
       <div
         className={`relative z-10 h-full w-[300px] max-w-[85vw] overflow-y-auto bg-ink px-4 pb-[30px] pt-[30px]
-          transform transition-transform duration-300 ease-in-out sm:px-[15px] ${
-            open ? "translate-x-0" : "-translate-x-full"
+          transform transition-transform duration-300 ease-in-out sm:px-[15px] ${open ? "translate-x-0" : "-translate-x-full"
           }`}
         role="dialog"
         aria-modal="true"
@@ -62,10 +59,10 @@ const MobileNav = ({ open, onClose }) => {
           </a>
         </div>
 
-        <div className="border-t border-white/10">
+        <div>
           <ul className="m-0 list-none p-0">
             {navLinks.map((link) => (
-              <li key={link.href} className="">
+              <li key={link.href} className="border-t border-white/10">
                 <a
                   href={link.href}
                   onClick={onClose}
