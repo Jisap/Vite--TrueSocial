@@ -20,6 +20,16 @@ const Hero = () => {
       <div className="absolute -left-[791px] top-0 -z-10 h-[875px] w-[1010px] rounded-full bg-base/25 blur-[600px]
       [transform:matrix)(0.87,-0.5,0.54,0.84,0,0]" aria-hidden="true" />
 
+      <div className="mx-auto w-full max-w-[1320px] px-[15px]">
+        <div className="relative block">
+          <div>
+            <p className="text-ink">
+              Great desing services <br />
+              without the pretentiousnes.!
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
