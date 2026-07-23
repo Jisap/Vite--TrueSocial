@@ -100,6 +100,7 @@ const ChatWidget = () => {
                       className={inputClasses}
                     />
                   </div>
+
                   <div>
                     <label className="sr-only" html="chat-email">
                       Your Email
@@ -113,6 +114,32 @@ const ChatWidget = () => {
                       required
                       className={inputClasses}
                     />
+                  </div>
+
+                  <div>
+                    <label className="sr-only" html="chat-message">
+                      Your Message
+                    </label>
+
+                    <textarea
+                      id="chat-message"
+                      name="message"
+                      placeholder="Your Message*"
+                      required
+                      className={`${inputClasses} h-[120px] resize-none`}
+                      rows={4}
+                    />
+                  </div>
+
+                  <div className="text-center">
+                    <ThemeButton
+                      as="Button"
+                      type="submit"
+                      className="w-full"
+                    >
+                      Submit Now
+                      <span className="fas fa-arrow-right" aria-hidden="true"></span>
+                    </ThemeButton>
                   </div>
                 </form>
               </>
