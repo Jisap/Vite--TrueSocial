@@ -3,6 +3,7 @@ import Header from './components/layout/Header'
 import { useScrollSpy } from './hooks/useScrollSpy';
 import MobileNav from './components/layout/MobileNav';
 import Preloader from './components/common/Preloader';
+import CustomCursor from './components/common/CustomCursor';
 
 const SECTION_IDS = [
   "home",
@@ -22,6 +23,8 @@ export default function App() {
   return (
     <>
       <Preloader />
+      <CustomCursor />
+
       <div className='relative mx-auto w-full min-w-[300px] overflow-hidden h-[2000px]'>
         <Header
           activeId={activeId}
