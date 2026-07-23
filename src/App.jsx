@@ -5,6 +5,7 @@ import MobileNav from './components/layout/MobileNav';
 import Preloader from './components/common/Preloader';
 import CustomCursor from './components/common/CustomCursor';
 import ChatWidget from './components/common/ChatWidget';
+import Hero from './components/sections/Hero';
 
 const SECTION_IDS = [
   "home",
@@ -33,11 +34,16 @@ export default function App() {
           onOpenMobileNav={() => setMobileNavOpen(true)}
         />
 
-        <MobileNav
-          open={mobileNavOpen}
-          onClose={() => setMobileNavOpen(false)}
-        />
+        <main>
+          <Hero />
+        </main>
+
       </div>
+
+      <MobileNav
+        open={mobileNavOpen}
+        onClose={() => setMobileNavOpen(false)}
+      />
     </>
   )
 }
