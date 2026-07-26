@@ -39,6 +39,38 @@ const Hero = () => {
               Digital
             </h2>
           </Reveal>
+
+          <Reveal
+            as="div"
+            animation="fade-in-right"
+            delay="300ms"
+            className="relative flex flex-wrap items-center gap-5 sm:flex-nowrap md:gap-[70px]"
+          >
+            <ul className="relative flex shrink-0 flex-wrap items-center">
+              <li>
+                <div className="rounded-[50px] bg-base px-10 py-[30px] pr-[30px] sm:pr-[108px]">
+                  <p className="text-[28px] font-bold uppercase leading-[38px] text-ink sm:text-[30px] sm:leading-[40px]">
+                    WEB <br className="hidden sm:inline" />
+                    DESIGN
+                  </p>
+                </div>
+              </li>
+
+              <li className="-ml-[50px] hidden sm:block">
+                <div className="flex h-[140px] w-[140px] items-center justify-center rounded-[50px] bg-ink">
+                  <img
+                    src="/assets/images/icon/banner-one-icon-man.png"
+                    alt=""
+                    className="w-auto"
+                  />
+                </div>
+              </li>
+            </ul>
+
+            <h2 className="w-full text-right text-[clamp(40px,11vw,220px)] font-normal leading-none sm:w-auto sm:flex-1 sm:min-w-0 sm:text-left">
+              SOLUTION
+            </h2>
+          </Reveal>
         </div>
       </div>
     </section>
