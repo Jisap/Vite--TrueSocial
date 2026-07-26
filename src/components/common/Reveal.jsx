@@ -26,7 +26,7 @@ const Reveal = ({
   ...rest                       // Otras props
 }) => {
 
-  const [ref, inView] = useInView({ threshold: 0.15 });                                    // Se define el threshold y se obtiene el ref y el estado de visibilidad
+  const [inView, ref] = useInView({ threshold: 0.15 });                                    // Se define el threshold y se obtiene el ref y el estado de visibilidad
   const animationClass = ANIMATION_CLASSES[animation] ?? ANIMATION_CLASSES["fade-in-up"];  // Se define la clase de animacion, por defecto es fade-in-up
 
   return (

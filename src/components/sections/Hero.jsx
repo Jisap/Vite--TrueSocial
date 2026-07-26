@@ -1,3 +1,4 @@
+import Reveal from "../common/Reveal"
 
 
 const Hero = () => {
@@ -29,7 +30,15 @@ const Hero = () => {
             </p>
           </div>
 
-
+          <Reveal
+            as="div"
+            animation="fade-in-up"
+            className="relative mb-5 block"
+          >
+            <h2 className="text-[80px] font-normal leading-none sm:text-[85px] md:text-[130px] lg:text-[170px] xl:text-[220px]">
+              Digital
+            </h2>
+          </Reveal>
         </div>
       </div>
     </section>

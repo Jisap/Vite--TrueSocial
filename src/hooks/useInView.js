@@ -39,7 +39,7 @@ const useInView = ({ threshold = 0.25, rootMargin = "0px" }) => {
     return () => observer.disconnect();        // Se desconecta el observer cuando el componente se desmonta
   }, [threshold, rootMargin])
 
-  return (inView, ref)
+  return [inView, ref]
 }
 
 export default useInView

@@ -133,7 +133,7 @@ const ChatWidget = () => {
 
                   <div className="text-center">
                     <ThemeButton
-                      as="Button"
+                      as="button"
                       type="submit"
                       className="w-full"
                     >
