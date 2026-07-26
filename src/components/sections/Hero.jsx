@@ -28,6 +28,8 @@ const Hero = () => {
               without the pretentiousnes.!
             </p>
           </div>
+
+
         </div>
       </div>
     </section>
