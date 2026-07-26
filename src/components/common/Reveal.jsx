@@ -1,3 +1,4 @@
+import useInView from "../../hooks/useInView"
 
 
 const ANIMATION_CLASSES = {
@@ -25,12 +26,20 @@ const Reveal = ({
   ...rest                       // Otras props
 }) => {
 
-
+  const [ref, inView] = useInView({ threshold: 0.15 });                                    // Se define el threshold y se obtiene el ref y el estado de visibilidad
+  const animationClass = ANIMATION_CLASSES[animation] ?? ANIMATION_CLASSES["fade-in-up"];  // Se define la clase de animacion, por defecto es fade-in-up
 
   return (
 
     <>
-
+      <Tag
+        ref={ref}
+        className={`${className} ${inView ? animationClass : "opacity-0"}`.trim()}
+        style={{ animationDelay: delay }}
+        {...rest}
+      >
+        {children}
+      </Tag>
     </>
   )
 }

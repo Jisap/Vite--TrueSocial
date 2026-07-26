@@ -24,19 +24,19 @@ const useInView = ({ threshold = 0.25, rootMargin = "0px" }) => {
     }
 
     // observer only need to be set up once, when the component mounts
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect()
+    const observer = new IntersectionObserver( // Se crea un observer para detectar cuando el elemento entra en el viewport
+      ([entry]) => {                           // entry es un objeto que contiene información sobre el elemento que se está observando
+        if (entry.isIntersecting) {            // Si el elemento entra en el viewport
+          setInView(true);                     // Se actualiza el estado para indicar que el elemento está en el viewport
+          observer.disconnect()                // Se desconecta el observer para evitar que se ejecute de nuevo
         }
-      }, {
-      threshold,
-      rootMargin
+      }, {                                     // Opciones del observer
+      threshold,                               // Porcentaje de visibilidad del elemento para que se considere en el viewport
+      rootMargin                               // Margen del viewport
     });
 
-    observer.observe(node);
-    return () => observer.disconnect();
+    observer.observe(node);                    // Se empieza a observar el elemento
+    return () => observer.disconnect();        // Se desconecta el observer cuando el componente se desmonta
   }, [threshold, rootMargin])
 
   return (inView, ref)
