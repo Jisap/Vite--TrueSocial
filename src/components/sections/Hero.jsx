@@ -67,7 +67,7 @@ const Hero = () => {
               </li>
             </ul>
 
-            <h2 className="w-full text-right text-[clamp(40px,11vw,220px)] font-normal leading-none sm:w-auto sm:flex-1 sm:min-w-0 sm:text-left">
+            <h2 className="w-full text-right text-[clamp(40px,11vw,150px)] font-normal leading-none sm:w-auto sm:flex-1 sm:min-w-0 sm:text-left">
               SOLUTION
             </h2>
           </Reveal>
