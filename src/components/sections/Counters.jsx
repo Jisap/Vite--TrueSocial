@@ -1,3 +1,5 @@
+import useCountUp from "../../hooks/useCountUp"
+
 
 
 /**
@@ -11,10 +13,15 @@
 
 const Counters = ({ value, suffix = "", className = "" }) => {
 
-    const [ref, count] =
-    
+    const [ref, count] = useCountUp(value)
+
     return (
-        <div>Counters</div>
+        <>
+            <h3 ref={ref} className={className}>
+                {count}
+            </h3>
+            {suffix && <span className={className}>{suffix}</span>}
+        </>
     )
 }
 
