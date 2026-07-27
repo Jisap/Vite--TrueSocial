@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CircularText from "../common/CircularText";
 
 
 const SHOWREEL_URL = "https://www.youtube.com/"
