@@ -37,6 +37,13 @@ const Explore = () => {
           </button>
         </div>
       </div>
+
+      {videoOpen && (
+        <VideoModal
+          src={SHOWREEL_URL}
+          onClose={() => setVideoOpen(false)}
+        />
+      )}
     </section>
   )
 }
