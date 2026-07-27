@@ -1,8 +1,9 @@
 import { useState } from "react";
 import CircularText from "../common/CircularText";
+import VideoModal from "../common/VideoModal";
 
 
-const SHOWREEL_URL = "https://www.youtube.com/"
+const SHOWREEL_URL = "https://www.youtube.com/watch?v=vNj8MQ6991c"
 
 const Explore = () => {
 
@@ -40,7 +41,7 @@ const Explore = () => {
 
       {videoOpen && (
         <VideoModal
-          src={SHOWREEL_URL}
+          videoUrl={SHOWREEL_URL}
           onClose={() => setVideoOpen(false)}
         />
       )}

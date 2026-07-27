@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-
+import { useEffect, useRef } from "react"
 
 /**
  * Minimal accessible lightbox for the YouTube "play video" links.
@@ -9,6 +8,7 @@ import { useEffect } from "react"
  */
 
 const VideoModal = ({ videoUrl, onClose }) => {
+  const closeButtonRef = useRef(null);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -19,6 +19,7 @@ const VideoModal = ({ videoUrl, onClose }) => {
 
     document.addEventListener("keydown", handleKeyDown);
     document.body.classList.add("locked");
+    closeButtonRef.current?.focus();
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
@@ -27,6 +28,10 @@ const VideoModal = ({ videoUrl, onClose }) => {
   }, [onClose]);
 
   const embedUrl = toEmbedUrl(videoUrl);
+
+  if (!embedUrl) {
+    return null;
+  }
 
   return (
     <div
@@ -37,12 +42,13 @@ const VideoModal = ({ videoUrl, onClose }) => {
       onClick={onClose}
     >
       <button
+        ref={closeButtonRef}
         type="button"
         onClick={onClose}
         aria-label="Close video"
         className="absolute right-5 top-5 text-3xl text-white transition-opacity hover:opacity-70"
       >
-        <i className="fa fa-time" aria-hidden="true" />
+        <i className="fa fa-times" aria-hidden="true" />
       </button>
 
       <div
@@ -53,7 +59,8 @@ const VideoModal = ({ videoUrl, onClose }) => {
           className="h-full w-full"
           src={embedUrl}
           title="Promotional video"
-          allow="accelerometer; autoplay; clipboard-write; encryoted-media; gyroscope; picture-in-picutre allowFullScreen"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
       </div>
     </div>
@@ -61,9 +68,10 @@ const VideoModal = ({ videoUrl, onClose }) => {
 }
 
 function toEmbedUrl(url) {
-  const match = url.match(/(?:v=|youtu\.be\/)([/w-]+)/);
+  if (!url) return null;
+  const match = url.match(/(?:v=|youtu\.be\/)([\w-]+)/);
   const id = match ? match[1] : "";
-  return `https://www.youtube.com/embed/${id}?autoplay=1`;
+  return id ? `https://www.youtube.com/embed/${id}?autoplay=1` : null;
 }
 
 export default VideoModal
