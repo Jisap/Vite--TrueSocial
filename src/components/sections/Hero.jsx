@@ -142,8 +142,8 @@ const Hero = () => {
                     />
                   </div>
 
-                  <p>
-
+                  <p className="text-lg font-normal text-ink ml-2">
+                    Reviews
                   </p>
                 </div>
               </div>
