@@ -116,6 +116,11 @@ const Hero = () => {
                     />
                   </div>
                 </li>
+                <li className="-ml-[15px]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-ink">
+
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
