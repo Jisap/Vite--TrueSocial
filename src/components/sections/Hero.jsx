@@ -14,20 +14,20 @@ const Hero = () => {
 
       <div className="absolute inset-x-0 bottom-0 top-[150px] -z-10 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url(/assets/images/shapes/banner-on-shape-1.png"
+          backgroundImage: "url(/assets/images/shapes/banner-on-shape-1.png)"
         }}
         aria-hidden="true"
       />
 
       <div className="absolute -left-[791px] top-0 -z-10 h-[875px] w-[1010px] rounded-full bg-base/25 blur-[600px]
-      [transform:matrix)(0.87,-0.5,0.54,0.84,0,0]" aria-hidden="true" />
+      [transform:matrix(0.87,-0.5,0.54,0.84,0,0)]" aria-hidden="true" />
 
       <div className="mx-auto w-full max-w-[1320px] px-[15px]">
         <div className="relative block">
           <div>
             <p className="text-ink">
-              Great desing services <br />
-              without the pretentiousnes.!
+              Great design services <br />
+              without the pretentiousness.
             </p>
           </div>
 
@@ -73,10 +73,10 @@ const Hero = () => {
             </h2>
           </Reveal>
 
-          <div className="relative mt-10 flex flex-wrap items-center gap-8 xl:absolute xl:right-0 xl:top-0 xl:mt-0 xl:w-full xl:max-w-[500px]
-          xl:flex-nowrap xl:items-center 2xl:right-[-170px] 2xl:top-[110px] 2xl:max-w-[765px]"
+          <div className="relative mt-10 flex flex-wrap items-center gap-8 lg:flex-nowrap
+          2xl:absolute 2xl:right-[-170px] 2xl:top-[110px] 2xl:mt-0 2xl:w-full 2xl:max-w-[765px]"
           >
-            <div className="relative flex-1">
+            <div className="relative min-w-[240px] flex-1">
               <p className="mb-[10px] text-ink">
                 We believe that the surest measure of success is when our partners with us more than half.
                 It&apos;s more than just the visuals. We&apos;re here to support your growth.
@@ -88,8 +88,8 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="relative w-full max-w-[240px] flex-1 xl:ml-10">
-              <ul className="relative mx-auto flex max-w-[166px] flex-wrap items-center justify-center rounded-[32px] border border-ink !p-[7px]">
+            <div className="relative mx-auto w-full max-w-[240px] shrink-0 lg:mx-0 lg:ml-10">
+              <ul className="relative mx-auto flex w-fit flex-nowrap items-center justify-center rounded-[32px] border border-ink !p-[7px]">
                 <li>
                   <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white">
                     <img
