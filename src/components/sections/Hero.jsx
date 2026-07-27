@@ -71,6 +71,54 @@ const Hero = () => {
               SOLUTION
             </h2>
           </Reveal>
+
+          <div className="relative mt-10 flex flex-wrap items-center gap-8 xl:absolute xl:right-0 xl:top-0 xl:mt-0 xl:w-full xl:max-w-[500px]
+          xl:flex-nowrap xl:items-center 2xl:right-[-170px] 2xl:top-[110px] 2xl:max-w-[765px]"
+          >
+            <div className="relative flex-1">
+              <p className="mb-[10px] text-ink">
+                We believe that the surest measure of success is when our partners with us more than half.
+                It&apos;s more than just the visuals. We&apos;re here to support your growth.
+              </p>
+
+              <a href="#services" className="relative flex items-center justify-end gap-[3px]  text-base font-bold text-ink transition-colors duration-500 hover:text-[#BFF747]">
+                View all Services
+                <span className="icon-arrow-up-right" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div className="relative w-full max-w-[240px] flex-1 xl:ml-10">
+              <ul className="relative mx-auto flex max-w-[166px] flex-wrap items-center justify-center rounded-[32px] border border-ink !p-[7px]">
+                <li>
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white">
+                    <img
+                      src="/assets/images/resources/banner-one-review-img-1-1.jpg"
+                      alt="Client avatar"
+                      className="w-full rounded-full"
+                    />
+                  </div>
+                </li>
+                <li className="-ml-[15px]">
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white">
+                    <img
+                      src="/assets/images/resources/banner-one-review-img-1-2.jpg"
+                      alt="Client avatar"
+                      className="w-full rounded-full"
+                    />
+                  </div>
+                </li>
+                <li className="-ml-[15px]">
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white">
+                    <img
+                      src="/assets/images/resources/banner-one-review-img-1-3.jpg"
+                      alt="Client avatar"
+                      className="w-full rounded-full"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
