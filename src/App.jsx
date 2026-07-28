@@ -7,6 +7,7 @@ import CustomCursor from './components/common/CustomCursor';
 import ChatWidget from './components/common/ChatWidget';
 import Hero from './components/sections/Hero';
 import Explore from './components/sections/Explore';
+import About from './components/sections/About';
 
 const SECTION_IDS = [
   "home",
@@ -38,6 +39,7 @@ export default function App() {
         <main>
           <Hero />
           <Explore />
+          <About />
         </main>
 
       </div>
