@@ -26,24 +26,24 @@ const About = () => {
           We collaborate with a few disability service providers to create inclusive goods that meet their requirements.
         </h2>
 
-        <div className='grid grid-cols-1 gap-x-[30px] gap-y-[30px] xl:grid-cols-4'>
-          <div className='xl:col-span-1'>
-            <div className='relative mb-[30px] ml-0 mt-0 sm:mb-0 sm:ml-[100px] sm:mt-[27px] xl:ml-[75px] flex justify-center'>
+        <div className='grid grid-cols-1 gap-x-[30px] gap-y-[30px] lg:grid-cols-4'>
+          <div className='lg:col-span-1 text-center lg:text-left'>
+            <div className='relative mb-2 mt-0 flex justify-center lg:justify-start'>
               <Counters
                 value={25}
                 suffix="+"
-                className='font-sans text-[50px] font-bold leading-[50px] text-white'
+                className='font-sans text-[40px] sm:text-[50px] font-bold leading-[50px] text-white'
               />
             </div>
 
-            <p className='text-center font-bold leading-[19px] text-white'>
+            <p className='font-bold leading-[19px] text-white'>
               Years Of Experience
             </p>
           </div>
 
-          <div className='xl:col-span-3'>
-            <div className='grid grid-cols-1 gap-x-[30px] gap-y-[30px] sm:ml-[53px] lg:grid-cols-2'>
-              <div className='relative mb-[30px]'>
+          <div className='lg:col-span-3'>
+            <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
+              <div className='relative mb-[15px] sm:mb-0'>
                 <p className='mb-[27px] capitalize text-[#F5F5F4]'>
                   {ABOUT_TEXT}
                 </p>
@@ -60,7 +60,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className='relative mb-[30px] ml-0 sm:ml-[47px]'>
+              <div className='relative'>
                 <p className='mb-[27px] capitalize text-[#F5F5F4]'>
                   {ABOUT_TEXT}
                 </p>
@@ -80,18 +80,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* <div className='relative block pt-5 sm:pt-[81px] bg-red-500'>
-          <div className='relative ml-0 text-center before:absolute before:left-0 before:top-[15px] before:hidden before:h-px before:w-[120px]
-        before:bg-[#2A2A2A] before:content-[""] after:absolute after:right-0 after:top-[15px] after:hidden after:h-px after:w-[706px] after:bg-[#2A2A2A]
-        after:content-[""] sm:ml-[135px] sm:text-left sm:before:-left-[135px] sm:before:block sm:after:block sm:after:w-full'
-          >
-            <h3 className='text-2xl capitalize leading-[34px] text-white'>
-              We worked with global largest brands
-            </h3>
-          </div>
-        </div> */}
         <SectionDivider
-          className='mt-10'
+          className='mt-10 md:mt-16'
           leftClassName="w-12 md:w-20 "
           rightClassName="flex-1"
         >
@@ -99,7 +89,7 @@ const About = () => {
         </SectionDivider>
 
         <div className='relative z-[2] block'>
-          <div className='relative block pt-[30px] sm:pt-[50px]'>
+          <div className='relative block pt-8 sm:pt-12'>
             <Swiper
               modules={[
                 Autoplay,
@@ -108,13 +98,13 @@ const About = () => {
               loop
               speed={2000}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
-              spaceBetween={0}
-              slidesPerView={1}
+              spaceBetween={20}
+              slidesPerView={2}
               breakpoints={{
-                768: { slidesPerView: 3, spaceBetween: 30 },
-                992: { slidesPerView: 4, spaceBetween: 30 },
-                1200: { slidesPerView: 5, spaceBetween: 30 },
-                1400: { slidesPerView: 5, spaceBetween: 30 },
+                480: { slidesPerView: 2, spaceBetween: 20 },
+                640: { slidesPerView: 3, spaceBetween: 25 },
+                768: { slidesPerView: 4, spaceBetween: 30 },
+                1024: { slidesPerView: 5, spaceBetween: 30 },
               }}
               a11y={{ enabled: true }}
             >
