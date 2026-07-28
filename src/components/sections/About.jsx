@@ -1,5 +1,6 @@
 import React from 'react'
 import Counters from './Counters'
+import SectionDivider from '../common/SectionDivider'
 
 const ABOUT_TEXT = "Established in 1995, TrueSocial has been a leading force in the digital landscape for over two decades. We're a passionate team of designers"
 
@@ -71,11 +72,9 @@ const About = () => {
               </div>
             </div>
           </div>
-
-
         </div>
 
-        <div className='relative block pt-5 sm:pt-[81px] bg-red-500'>
+        {/* <div className='relative block pt-5 sm:pt-[81px] bg-red-500'>
           <div className='relative ml-0 text-center before:absolute before:left-0 before:top-[15px] before:hidden before:h-px before:w-[120px]
         before:bg-[#2A2A2A] before:content-[""] after:absolute after:right-0 after:top-[15px] after:hidden after:h-px after:w-[706px] after:bg-[#2A2A2A]
         after:content-[""] sm:ml-[135px] sm:text-left sm:before:-left-[135px] sm:before:block sm:after:block sm:after:w-full'
@@ -84,7 +83,13 @@ const About = () => {
               We worked with global largest brands
             </h3>
           </div>
-        </div>
+        </div> */}
+        <SectionDivider
+          leftClassName="w-12 md:w-20 "
+          rightClassName="flex-1"
+        >
+          We worked with global largest brands
+        </SectionDivider>
       </div>
     </section>
   )
