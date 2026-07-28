@@ -1,6 +1,12 @@
 import React from 'react'
 import Counters from './Counters'
 import SectionDivider from '../common/SectionDivider'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
+import "swiper/css";
+import "swiper/css/pagination";
+import { brandLogos } from "../../data/brands";
+
 
 const ABOUT_TEXT = "Established in 1995, TrueSocial has been a leading force in the digital landscape for over two decades. We're a passionate team of designers"
 
@@ -85,11 +91,46 @@ const About = () => {
           </div>
         </div> */}
         <SectionDivider
+          className='mt-10'
           leftClassName="w-12 md:w-20 "
           rightClassName="flex-1"
         >
           We worked with global largest brands
         </SectionDivider>
+
+        <div className='relative z-[2] block'>
+          <div className='relative block pt-[30px] sm:pt-[50px]'>
+            <Swiper
+              modules={[
+                Autoplay,
+                Pagination
+              ]}
+              loop
+              speed={2000}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              spaceBetween={0}
+              slidesPerView={1}
+              breakpoints={{
+                768: { slidesPerView: 3, spaceBetween: 30 },
+                992: { slidesPerView: 4, spaceBetween: 30 },
+                1200: { slidesPerView: 5, spaceBetween: 30 },
+                1400: { slidesPerView: 5, spaceBetween: 30 },
+              }}
+              a11y={{ enabled: true }}
+            >
+              {brandLogos.map((b) => (
+                <SwiperSlide key={b.id}>
+                  <div className='relative block'>
+                    <div className='relative z-[1] flex items-center justify-center'>
+                      <img src={b.src} alt={b.alt} className='w-auto' />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))
+              }
+            </Swiper>
+          </div>
+        </div>
       </div>
     </section>
   )

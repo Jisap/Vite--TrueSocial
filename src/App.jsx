@@ -30,7 +30,7 @@ export default function App() {
       <CustomCursor />
       <ChatWidget />
 
-      <div className='relative mx-auto w-full min-w-[300px] overflow-hidden h-[2000px]'>
+      <div className='relative mx-auto w-full min-w-[300px] overflow-hidden'>
         <Header
           activeId={activeId}
           onOpenMobileNav={() => setMobileNavOpen(true)}
