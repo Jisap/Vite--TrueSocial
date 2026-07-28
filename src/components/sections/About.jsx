@@ -21,7 +21,7 @@ const About = () => {
 
         <div className='grid grid-cols-1 gap-x-[30px] gap-y-[30px] xl:grid-cols-4'>
           <div className='xl:col-span-1'>
-            <div className='relative mb-[30px] ml-0 mt-0 sm:mb-0 sm:ml-[100px] sm:mt-[27px] xl:ml-[75px]'>
+            <div className='relative mb-[30px] ml-0 mt-0 sm:mb-0 sm:ml-[100px] sm:mt-[27px] xl:ml-[75px] flex justify-center'>
               <Counters
                 value={25}
                 suffix="+"
@@ -29,7 +29,7 @@ const About = () => {
               />
             </div>
 
-            <p className='font-bold leading-[19px] text-white'>
+            <p className='text-center font-bold leading-[19px] text-white'>
               Years Of Experience
             </p>
           </div>
