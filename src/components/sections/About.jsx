@@ -51,9 +51,38 @@ const About = () => {
                     <span className='icon-arrow-up-right' aria-hidden="true"></span>
                   </a>
                 </div>
+              </div>
 
+              <div className='relative mb-[30px] ml-0 sm:ml-[47px]'>
+                <p className='mb-[27px] capitalize text-[#F5F5F4]'>
+                  {ABOUT_TEXT}
+                </p>
+
+                <div className='relative inline-block'>
+                  <a href="#services" className='relative flex items-center gap-[3px] font-medium text-[#F5F5F4]
+                  transition-colors duration-500 before:absolute before:bottom-[2px] before:left-0 before:right-0 before:h-px
+                  before:bg-[#F5F5F4] before:transition-colors before:duration-500 before:content-[""] hover:text-[#BFF747]
+                  hover:before:bg-[#CFF747]'
+                  >
+                    More About Us
+                    <span className='icon-arrow-up-right' aria-hidden="true"></span>
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+
+
+        </div>
+
+        <div className='relative block pt-5 sm:pt-[81px] bg-red-500'>
+          <div className='relative ml-0 text-center before:absolute before:left-0 before:top-[15px] before:hidden before:h-px before:w-[120px]
+        before:bg-[#2A2A2A] before:content-[""] after:absolute after:right-0 after:top-[15px] after:hidden after:h-px after:w-[706px] after:bg-[#2A2A2A]
+        after:content-[""] sm:ml-[135px] sm:text-left sm:before:-left-[135px] sm:before:block sm:after:block sm:after:w-full'
+          >
+            <h3 className='text-2xl capitalize leading-[34px] text-white'>
+              We worked with global largest brands
+            </h3>
           </div>
         </div>
       </div>
