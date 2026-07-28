@@ -9,15 +9,16 @@ import { brandLogos } from "../../data/brands";
 
 
 const ABOUT_TEXT = "Established in 1995, TrueSocial has been a leading force in the digital landscape for over two decades. We're a passionate team of designers"
+const ABOUT_TEXT2 = "Our in-house creative team excels at crafting brand identities, high-converting web experiences, compelling video narratives, and strategic campaign management. "
 
 const About = () => {
   return (
     <section className='relative z-[1] block bg-ink py-[71px] pb-20 sm:py-[109px] sm:pb-[120px]' id="about">
-      <div className='absolute right-[120px] top-20 -z-10 hidden sm:block' aria-hidden="true">
+      <div className='absolute right-11 top-16 -z-10 hidden xl:block opacity-40 2xl:opacity-100 pointer-events-none' aria-hidden="true">
         <img
           src="/assets/images/shapes/about-one-shape-1.png"
           alt=""
-          className='w-auto'
+          className='w-auto max-w-[150px] 2xl:max-w-none'
         />
       </div>
 
@@ -62,7 +63,7 @@ const About = () => {
 
               <div className='relative'>
                 <p className='mb-[27px] capitalize text-[#F5F5F4]'>
-                  {ABOUT_TEXT}
+                  {ABOUT_TEXT2}
                 </p>
 
                 <div className='relative inline-block'>
