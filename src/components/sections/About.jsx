@@ -41,7 +41,16 @@ const About = () => {
                   {ABOUT_TEXT}
                 </p>
 
-                <div></div>
+                <div className='relative inline-block'>
+                  <a href="#services" className='relative flex items-center gap-[3px] font-medium text-[#F5F5F4]
+                  transition-colors duration-500 before:absolute before:bottom-[2px] before:left-0 before:right-0 before:h-px
+                  before:bg-[#F5F5F4] before:transition-colors before:duration-500 before:content-[""] hover:text-[#BFF747]
+                  hover:before:bg-[#CFF747]'
+                  >
+                    More About Us
+                    <span className='icon-arrow-up-right' aria-hidden="true"></span>
+                  </a>
+                </div>
 
               </div>
             </div>
