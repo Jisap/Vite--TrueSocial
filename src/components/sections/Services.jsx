@@ -73,7 +73,24 @@ const Services = () => {
                   >
                     <div className="relative flex items-center gap-2">
                       <div className="relative block h-[6px] w-[6px] rounded-full bg-muted" aria-hidden="true" />
+                      <span className="relative inline-block text-muted">
+                        {service.tagline}
+                      </span>
                     </div>
+
+                    <h3 className="mb-5 mt-[13px] text-[30px] font-normal leading-[40px]">
+                      <a href="#" className="text-ink transition-colors duration-500 hover:text-[#BFF747]">
+                        {service.title}
+                      </a>
+                    </h3>
+
+                    <div className="relative inline-block">
+                      <span className={`${service.icon} relative inline-block text-[60px] text-ink transition-all duration-500 group-hover:animate-wobble`} aria-hidden="true" />
+                    </div>
+
+                    <p className='mt-[19px] capitalize'>
+                      {service.text}
+                    </p>
                   </div>
                 </div>
               </Reveal>
