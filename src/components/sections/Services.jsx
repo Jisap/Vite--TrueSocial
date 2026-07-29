@@ -1,5 +1,7 @@
 import React from 'react'
 import SectionTitle from '../common/SectionTitle'
+import { services } from '../../data/services'
+import Reveal from '../common/Reveal'
 
 const Services = () => {
   return (
@@ -60,12 +62,18 @@ const Services = () => {
                       className="relative flex h-14 w-14 items-center justify-center rounded-full border border-border bg-white
                       text-[23px] text-ink transition-all duration-500 group-hover:-rotate-45 group-hover:border-base group-hover:bg-base"
                     >
-                      <span className="icon-arroe-down" aria-hidden="true" />
+                      <span className="icon-arrow-down" aria-hidden="true" />
                     </a>
                   </div>
 
-                  <div className="relative mb-[30px] blcok border border-border px-[10px] pb-8 pt-[34px]">
-
+                  <div className="relative mb-[30px] block border border-border px-[10px] pb-8 pt-[34px] [clip-path:polygon(0_0,100%_0,100%_88%,88%_100%,0_100%.0%_50px)]
+                  before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-px before:origin-right before:scale-x-0 before:bg-base before:transition-transform
+                  before:duration-500 before:delay-100 before:ease-in-out before:content-[''] after:w-px after:origin-top after:scale-y-0 after:bg-base after:transition-transform
+                  after:duration-500 after:delay-100 after:ease-in-out after:content-[''] group-hover:before:scale-x-100 group-hover:after:scale-y-100 md:px-10"
+                  >
+                    <div className="relative flex items-center gap-2">
+                      <div className="relative block h-[6px] w-[6px] rounded-full bg-muted" aria-hidden="true" />
+                    </div>
                   </div>
                 </div>
               </Reveal>
