@@ -18,6 +18,12 @@ const Services = () => {
           className='w-auto animate-float-bob-y'
         />
       </div>
+
+      <div className='mx-auto w-full max-w-[1320px]'>
+        <div className='relative mb-[60px] block border-b border-border pb-[50px] md:pb-[82px]'>
+
+        </div>
+      </div>
     </section>
   )
 }
