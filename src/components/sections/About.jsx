@@ -1,5 +1,6 @@
 import React from 'react'
-import Counters from './Counters'
+
+import Counter from '../common/Counter'
 import SectionDivider from '../common/SectionDivider'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
@@ -30,7 +31,7 @@ const About = () => {
         <div className='grid grid-cols-1 gap-x-[30px] gap-y-[30px] lg:grid-cols-4'>
           <div className='lg:col-span-1 text-center lg:text-left'>
             <div className='relative mb-2 mt-0 flex justify-center lg:justify-start'>
-              <Counters
+              <Counter
                 value={25}
                 suffix="+"
                 className='font-sans text-[40px] sm:text-[50px] font-bold leading-[50px] text-white'

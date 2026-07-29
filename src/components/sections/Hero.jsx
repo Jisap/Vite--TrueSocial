@@ -1,5 +1,5 @@
 import Reveal from "../common/Reveal"
-import Counters from "./Counters"
+import Counter from "../common/Counter"
 
 
 const Hero = () => {
@@ -119,7 +119,7 @@ const Hero = () => {
                 </li>
                 <li className="-ml-[15px] z-50">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-ink ">
-                    <Counters
+                    <Counter
                       value={15}
                       suffix="K+"
                       className="font-sans text-base font-medium text-white"
@@ -135,7 +135,7 @@ const Hero = () => {
                   </p>
 
                   <div className="relative flex flex-wrap items-center">
-                    <Counters
+                    <Counter
                       value={4000}
                       suffix="+"
                       className="font-sans text-2xl font-bold leading-6 text-ink"
