@@ -8,6 +8,7 @@ import ChatWidget from './components/common/ChatWidget';
 import Hero from './components/sections/Hero';
 import Explore from './components/sections/Explore';
 import About from './components/sections/About';
+import Services from './components/sections/Services';
 
 const SECTION_IDS = [
   "home",
@@ -40,6 +41,7 @@ export default function App() {
           <Hero />
           <Explore />
           <About />
+          <Services />
         </main>
 
       </div>
