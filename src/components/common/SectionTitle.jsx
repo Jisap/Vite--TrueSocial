@@ -20,7 +20,7 @@ const SectionTitle = ({
   const titleColor = variant === "dark" ? "text-white" : "text-dark";
 
   return (
-    <div className="">
+    <div className={``}>
 
     </div>
   )
