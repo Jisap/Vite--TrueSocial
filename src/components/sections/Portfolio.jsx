@@ -24,6 +24,11 @@ const Portfolio = () => {
                 className="!mb-[38px]"
               />
             </div>
+
+            <p className="capitalize">
+              Established in 1995, TrueSocial has been leading force in the digital landscape for over two decades. We&apos;re a passionate
+
+            </p>
           </div>
         </div>
       </div>
