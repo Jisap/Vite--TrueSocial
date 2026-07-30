@@ -10,6 +10,7 @@ import Explore from './components/sections/Explore';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Counters from './components/sections/Counters';
+import VideoBanner from './components/sections/VideoBanner';
 
 const SECTION_IDS = [
   "home",
@@ -44,6 +45,7 @@ export default function App() {
           <About />
           <Services />
           <Counters />
+          <VideoBanner />
         </main>
 
       </div>
