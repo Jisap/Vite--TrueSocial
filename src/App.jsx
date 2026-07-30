@@ -9,6 +9,7 @@ import Hero from './components/sections/Hero';
 import Explore from './components/sections/Explore';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
+import Counters from './components/sections/Counters';
 
 const SECTION_IDS = [
   "home",
@@ -42,6 +43,7 @@ export default function App() {
           <Explore />
           <About />
           <Services />
+          <Counters />
         </main>
 
       </div>
