@@ -12,7 +12,7 @@ const Counters = () => {
           {counters.map((stat) => (
             <li
               key={stat.id}
-              className="relative w-full max-w-[370px] sm:w-1/2 sm:max-w-none sm:px-[15px] xl:max-w-[370px] xl:px-0 xl:[&not(:first-child)]:-ml-[65px]"
+              className="relative w-full max-w-[370px] sm:w-1/2 sm:max-w-none sm:px-[15px] xl:max-w-[370px] xl:px-0 xl:[&:not(:first-child)]:-ml-[65px]"
             >
               <Reveal
                 animation={stat.reveal}
@@ -25,6 +25,15 @@ const Counters = () => {
                     className="font-sans text-[64px] font-medium leading-[64px] text-ink"
                   />
                 </div>
+
+                <p className="font-serif text-[30px] leading-[40px]">
+                  {stat.label.split("/n").map((line, i) => (
+                    <span key={line}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </p>
               </Reveal>
             </li>
           ))}

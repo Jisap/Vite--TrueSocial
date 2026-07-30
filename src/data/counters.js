@@ -26,7 +26,7 @@ export const counters = [
   {
     id: "awards",
     value: 88,
-    suffix: "",
+    suffix: "Awd",
     label: "Awards\nachievement",
     reveal: "fade-in-right",
     delay: "450ms",
