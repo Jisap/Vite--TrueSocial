@@ -14,6 +14,7 @@ import VideoBanner from './components/sections/VideoBanner';
 import Portfolio from './components/sections/Portfolio';
 import Process from './components/sections/Process';
 import WhyChoose from './components/sections/WhyChoose';
+import Team from './components/sections/Team';
 
 const SECTION_IDS = [
   "home",
@@ -52,6 +53,7 @@ export default function App() {
           <Portfolio />
           <Process />
           <WhyChoose />
+          <Team />
         </main>
 
       </div>
