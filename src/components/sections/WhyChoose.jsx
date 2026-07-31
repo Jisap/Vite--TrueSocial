@@ -23,7 +23,7 @@ const WhyChoose = () => {
 
                 <div className="relative ml-0 mt-[45px] block xl:-ml-[60px] xl:mt-[52px]">
                   <img
-                    src="/public/assets/images/resources/why-choose-one-img-1.jpg"
+                    src="/assets/images/resources/why-choose-one-img-1.jpg"
                     alt="Why Choose"
                     className="w-full"
                   />
@@ -39,7 +39,7 @@ const WhyChoose = () => {
               <div className="relative ml-0 mr-0 block xl:-ml-10 xl:mr-[57px]">
                 <div className="relative block">
                   <img
-                    src="/public/assets/images/resources/why-choose-one-img-2.jpg"
+                    src="/assets/images/resources/why-choose-one-img-2.jpg"
                     alt="Why Choose"
                     className="w-full"
                   />
@@ -84,7 +84,7 @@ const WhyChoose = () => {
                     <div className="relative mb-[30px] block text-center">
                       <div className="relative z-[1] mx-auto block w-full max-w-[142px]">
                         <img
-                          src="/public/assets/images/resources/why-choose-one-mission-img-1.jpg"
+                          src="/assets/images/resources/why-choose-one-mission-img-1.jpg"
                           alt="Why Choose"
                           className="w-full rounded-full"
                         />
@@ -102,7 +102,7 @@ const WhyChoose = () => {
                     <div className="relative mb-[30px] block text-center">
                       <div className="relative z-[1] mx-auto block w-full max-w-[142px]">
                         <img
-                          src="/public/assets/images/resources/why-choose-one-mission-img-2.jpg"
+                          src="/assets/images/resources/why-choose-one-mission-img-2.jpg"
                           alt="Why Choose"
                           className="w-full rounded-full"
                         />
