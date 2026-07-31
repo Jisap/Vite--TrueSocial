@@ -99,8 +99,22 @@ const WhyChoose = () => {
                       </div>
                     </div>
 
-                    <div className="">
+                    <div className="relative mb-[30px] block text-center">
+                      <div className="relative z-[1] mx-auto block w-full max-w-[142px]">
+                        <img
+                          src="/public/assets/images/resources/why-choose-one-mission-img-2.jpg"
+                          alt="Why Choose"
+                          className="w-full rounded-full"
+                        />
+                      </div>
 
+                      <div className="relative -mt-[81px] block rounded-[50px] bg-base px-[30px] pb-8 pt-[104px]">
+                        <h4 className="font-sans text-base font-bold leading-[26px] text-black">
+                          UX/UI
+                          <br />
+                          Solutions
+                        </h4>
+                      </div>
                     </div>
                   </div>
                 </div>
