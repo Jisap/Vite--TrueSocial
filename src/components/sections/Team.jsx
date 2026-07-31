@@ -57,6 +57,16 @@ const Team = () => {
                       </ul>
                     </div>
                   </div>
+
+                  <div className="relative mt-[22px] block">
+                    <h3 className="text-2xl font-normal leading-[34px]">
+                      <a className="text-ink transition-colors duration-500 hover:text-ink">
+                        {member.name}
+                      </a>
+                    </h3>
+
+                    <p>{member.role}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
