@@ -16,6 +16,22 @@ const WhyChoose = () => {
                     title="Driving Digital Success With Strategy Design"
                   />
                 </div>
+
+                <p className="capitalize">
+                  We believe that the surest measure of success is when our partners with us more than half. It&apos;s more than just the visuals.
+                </p>
+
+                <div className="relative ml-0 mt-[45px] block xl:-ml-[60px] xl:mt-[52px]">
+                  <img
+                    src="/public/assets/images/resources/why-choose-one-img-1.jpg"
+                    alt="Why Choose"
+                    className="w-full"
+                  />
+
+                  <div className="absolute -left-[60px] bottom-[60px] h-[60px] w-[60px] bg-ink" aria-hidden="true">
+                    <div className="absolute bottom-0 left-0 h-[60px] w-[60px] bg-base" aria-hidden="true" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
