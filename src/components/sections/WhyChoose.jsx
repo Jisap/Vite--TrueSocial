@@ -1,9 +1,28 @@
-import React from 'react'
+import SectionTitle from "../common/SectionTitle"
+
 
 const WhyChoose = () => {
-    return (
-        <div>WhyChoose</div>
-    )
+  return (
+    <>
+      <section className="relative z-[1] block bg-surface py-20 pb-[50px] sm:py-[120px]">
+        <div className="mx-auto w-full max-w-[1320px] px-[15px]">
+          <div className="grid grid-cols-1 gap-x-[30px] gap-y-[30px] xl:grid-cols-12">
+            <div className="xl:col-span-6">
+              <div className="relative mx-auto mb-[60px] block max-w-[600px] xl:mb-0 xl:mr-[70px] xl:max-w-none">
+                <div className="[&_h2]:xl:-mr-[100px]">
+                  <SectionTitle
+                    tagline="What Sets Us Apart"
+                    align="left"
+                    title="Driving Digital Success With Strategy Design"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default WhyChoose

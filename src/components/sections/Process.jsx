@@ -33,7 +33,7 @@ const Process = () => {
 
                   <div className="absolute left-[81px] top-[48%] -z-10 hidden -translate-y-1/2 sm:block" aria-hidden="true">
                     <img
-                      src="/assets/images/icon/process-one-single-shape-1.png"
+                      src="/assets/images/shapes/process-one-single-shape-1.png"
                       alt=""
                       className="w-auto"
                     />
