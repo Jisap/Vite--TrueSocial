@@ -7,11 +7,11 @@ import { testimonials, testimonialImage } from "../../data/testimonials.js"
 
 
 const StartRating = ({ rating }) => {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0;
+  const full = Math.floor(rating);  // Toma la parte entera
+  const half = rating % 1 >= 0;     // Decide si hay decimal
 
   return (
-    <div className="relative flex flex-col items-center gap-[5px]" aria-label={`Rated ${rating} out of 5 stars`}>
+    <div className="relative flex items-center gap-[5px]" aria-label={`Rated ${rating} out of 5 stars`}>
       {
         Array.from({ length: full }).map((_, i) => (
           <span
@@ -89,11 +89,46 @@ const Testimonials = () => {
                                 {testimonial.title}
                               </p>
                             </div>
+
+                            <div className="relative inline-block">
+                              <span
+                                className="icon-quote relative inline-block text-[30px] text-ink"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          </div>
+
+                          <p className="mb-[23px] mt-[27px] border-b border-border pb-[21px] capitalize text-ink">
+                            &quot;{testimonial.quote}&quot;
+                          </p>
+
+                          <div className="flex flex-col items-baseline gap-5 sm:flex-row sm:items-center sm:gap-10">
+                            <div className="relative flex items-center gap-[15px] pr-0 sm:relative sm:pr-10 sm:before:absolute sm:before:right-0
+                            sm:before-top-[7px] sm:before:block sm:before:h-[44px] sm:before:w-px sm:before:n-ink sm:before:content-['']"
+                            >
+                              <div className="relative flex h-[45px] w-[45px] items-center justify-center rounded-full bg-ink">
+                                <span className="fas fa-star relative inline-block text-xl text-white" aria-hidden="true"></span>
+                              </div>
+
+                              <div className="relative flex-1 block">
+                                <span>Verified By</span>
+                                <h3 className="mt-[5px] font-sans text-2xl font-bold uppercase leading-6">
+                                  Trustpilot
+                                </h3>
+                              </div>
+                            </div>
+
+                            <StartRating rating={testimonial.rating} />
                           </div>
                         </div>
                       </SwiperSlide>
                     ))}
                   </Swiper>
+
+                  <div className="relative z-[5] mt-[30px] flex flex-row flex-wrap items-center sm:absolute sm:bottom-0 sm:right-0 sm:mt-0">
+                    <div className="testimonial-pagination relative inline-flex leading-none" />
+
+                  </div>
                 </div>
               </div>
             </div>
