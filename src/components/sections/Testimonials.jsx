@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import SectionTitle from "../common/SectionTitle"
-import { testimonialsData, testimonialImage } from "../../data/testimonials.js"
+import { testimonials, testimonialImage } from "../../data/testimonials.js"
 
 
 const StartRating = ({ rating }) => {
@@ -51,7 +51,50 @@ const Testimonials = () => {
                   tagline="OUR TESTIMONIALS"
                   align="left"
                   title="Hear Real Stories From Our happy Clients"
+                  className="!mb-7"
                 />
+
+                <div className="relative block">
+                  <Swiper
+                    modules={[Autoplay, Pagination]}
+                    loop
+                    speed={2000}
+                    autoplay={{ delay: 8000 }}
+                    slidesPerView={1}
+                    pagination={{
+                      el: ".testimonial-pagination",
+                      clickable: true,
+                      renderBullet: (index, className) => {
+                        const active = className.includes("swiper-pagination-bullet-active");
+                        return `<span class="${className} mx-1 inline-block h-1 w-[60px] cursor-pointer transition-colors delay-100 duration-200
+                        ${active ? "bg-ink" : "bg-[#CED3D7]"}"></span>`
+                      }
+                    }}
+                  >
+                    {testimonials.map((testimonial) => (
+                      <SwiperSlide key={testimonial.id}>
+                        <div className="relative block">
+                          <div className="flex items-center justify-between border-t- border-border pt-[31px]">
+                            <div className="relative block">
+                              <h3 className="font-sans text-[30px] font-bold leading-[40px]">
+                                <a
+                                  href="#"
+                                  className="text-ink hover:[text-shadow:1px_0_0_rgba(18,18,18,0.8)]"
+                                >
+                                  {testimonial.name}
+                                </a>
+                              </h3>
+
+                              <p className="text-sm leding-6">
+                                {testimonial.title}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
               </div>
             </div>
           </div>
