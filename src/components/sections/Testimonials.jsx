@@ -127,8 +127,21 @@ const Testimonials = () => {
 
                   <div className="relative z-[5] mt-[30px] flex flex-row flex-wrap items-center sm:absolute sm:bottom-0 sm:right-0 sm:mt-0">
                     <div className="testimonial-pagination relative inline-flex leading-none" />
-
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="xl:col-span-5">
+              <div className="relative ml-0 mr-0 block sm:ml-10 sm:mt-10">
+                <div className="relative z-[1] block before:absolute before:-right-10 before:-top-10 before:-bottom-0 before:left-0 before:-z-10
+                before:-bg-white befor:[clip-path:polygon(0_0,100%_0,100%_50%,100%_100%,44%_100%,43%_35%)] before:content-['']"
+                >
+                  <img
+                    src={testimonialImage.src}
+                    alt={testimonialImage.alt}
+                    className="w-full"
+                  />
                 </div>
               </div>
             </div>
