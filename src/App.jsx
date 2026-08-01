@@ -15,6 +15,7 @@ import Portfolio from './components/sections/Portfolio';
 import Process from './components/sections/Process';
 import WhyChoose from './components/sections/WhyChoose';
 import Team from './components/sections/Team';
+import Testimonials from './components/sections/Testimonials';
 
 const SECTION_IDS = [
   "home",
@@ -54,6 +55,7 @@ export default function App() {
           <Process />
           <WhyChoose />
           <Team />
+          <Testimonials />
         </main>
 
       </div>
