@@ -184,10 +184,88 @@ const Contact = () => {
                     </div>
                   </div>
 
+                  {/* Phone */}
+                  <div>
+                    <h4 className="mb-[5px] text-xl font-normal leading-[30px] text-white">
+                      Phone Number{" "}
+                      <span
+                        aria-hidden="true"
+                        className="text-[#bff747]"
+                      >
+                        *
+                      </span>
+                    </h4>
+
+                    <div className="relative mb-[23px] block transition-all duration-500">
+                      <label
+                        className="sr-only"
+                        htmlFor="contact-phone"
+                      >
+                        Phone Number
+                      </label>
+
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter Your Phone Number"
+                        required
+                        className={inputClasses}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Message */}
+                  <div>
+                    <h4 className="mb-[5px] text-xl font-normal leading-[30px] text-white">
+                      Message{" "}
+                      <span
+                        aria-hidden="true"
+                        className="text-[#bff747]"
+                      >
+                        *
+                      </span>
+                    </h4>
+
+                    <div className="relative mb-[23px] block transition-all duration-500">
+                      <label
+                        className="sr-only"
+                        htmlFor="contact-message"
+                      >
+                        Message
+                      </label>
+
+                      <input
+                        id="contact-message"
+                        type="text"
+                        name="message"
+                        placeholder="Enter Your Message"
+                        required
+                        className={`${inputClasses} !h-[150px] pt-[10px]`}
+                      />
+                    </div>
+                  </div>
                 </div>
+
+                <ThemeButton
+                  as="button"
+                  type="submit"
+                >
+                  Send a Message
+                  <span className="icon-arrow-up-right" aria-hidden="true"></span>
+                </ThemeButton>
               </form>
             )}
 
+            <p className="mb-[6px] mt-6 text-sm capitalize leading-6 text-white">
+              Didn&apos;t find what you were trying yo find? Write to us at.
+            </p>
+
+            <p className="text-base font-semibold leading-[26px]">
+              <a href="mailto:Info@TrueSocial.com" className="text-white transition-colors duration-500 hover:text-[#bff747]">
+                Info@TrueSocial.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
