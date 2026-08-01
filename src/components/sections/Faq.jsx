@@ -9,7 +9,7 @@ const Faq = () => {
   return (
     <>
       <section className='relative z-[1] block py-20 sm:py-[120px]'>
-        <div className='mx-auto w-full max-w-[1320px] py-[15px]'>
+        <div className='mx-auto w-full max-w-[1320px] px-5 py-[15px] sm:px-8 lg:px-10'>
           <SectionTitle
             tagline="FAQ"
             title="Frequency & Questions"
