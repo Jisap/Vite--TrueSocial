@@ -13,16 +13,18 @@ const StartRating = ({ rating }) => {
   return (
     <div className="relative flex flex-col items-center gap-[5px]" aria-label={`Rated ${rating} out of 5 stars`}>
       {
-        Array.from({ length: full }).map((_, index) => (
-          <span key={index} className="text-[#bff747">
-            <i className="fas fa-star" aria-hidden="true"></i>
-          </span>
+        Array.from({ length: full }).map((_, i) => (
+          <span
+            key={`full-${i}`}
+            className="fas fa-star relative inline-block text-base text-[#ff6633]"
+            aria-hidden="true"
+          />
         ))
       }
       {half && (
-        <span className="text-[#bff747]">
-          <i className="fas fa-star-half-alt" aria-hidden="true"></i>
-        </span>
+        <span
+          className="fas fa-star-half-alt relative inline-block text-base text-[#ff6633]"
+          aria-hidden="true" />
       )}
 
     </div>
