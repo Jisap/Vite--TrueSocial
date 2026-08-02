@@ -20,6 +20,7 @@ import Faq from './components/sections/Faq';
 import Contact from './components/sections/Contact';
 import Blog from './components/sections/Blog';
 import Footer from './components/layout/Footer';
+import ScrollToTopButton from './components/common/ScrollToTopButton';
 
 const SECTION_IDS = [
   "home",
@@ -72,6 +73,8 @@ export default function App() {
         open={mobileNavOpen}
         onClose={() => setMobileNavOpen(false)}
       />
+
+      <ScrollToTopButton />
     </>
   )
 }
