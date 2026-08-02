@@ -47,7 +47,7 @@ const Blog = () => {
                     <article className='group relative flex flex-col items-baseline gap-[30px] border border-border p-[19px] sm:flex-row sm:items-center'>
                       <div className='relative block w-full max-w-[190px]'>
                         <div className='relative block overflow-hidden before:absolute before:inset-0 before:z-[1] before:translate-y-[50px]
-                        before:bg-ink/[.69] before:transition-all before:duration-700 before:content-[""] gorup-hover:before:translate-y-0
+                        before:bg-ink/[.69] before:transition-all before:duration-700 before:content-[""] group-hover:before:translate-y-0
                         group-hover:before:opacity-100'
                         >
                           <img
@@ -58,9 +58,23 @@ const Blog = () => {
                         </div>
                       </div>
 
-                      <div>
+                      <div className='relative block flex-1'>
+                        <div className='flex items-center gap-5'>
+                          {post.category}
+                        </div>
 
+                        <span className='block h-[5px] rounded-full bg-ink' aria-hidden="true" />
+
+                        <p>
+                          {post.date}
+                        </p>
                       </div>
+
+                      <h3 className='mb-2 mt-1 font-sans text-2xl font-bold capitalize leading-[34px]'>
+                        <a href="#" className='text-ink transition-colors duration-500 hover:text-[#bff747]'>
+                          {post.title}
+                        </a>
+                      </h3>
                     </article>
                   </Reveal>
                 ))}
