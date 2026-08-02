@@ -18,6 +18,7 @@ import Team from './components/sections/Team';
 import Testimonials from './components/sections/Testimonials';
 import Faq from './components/sections/Faq';
 import Contact from './components/sections/Contact';
+import Blog from './components/sections/Blog';
 
 const SECTION_IDS = [
   "home",
@@ -60,6 +61,7 @@ export default function App() {
           <Testimonials />
           <Faq />
           <Contact />
+          <Blog />
         </main>
 
       </div>
