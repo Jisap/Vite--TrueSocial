@@ -19,6 +19,7 @@ import Testimonials from './components/sections/Testimonials';
 import Faq from './components/sections/Faq';
 import Contact from './components/sections/Contact';
 import Blog from './components/sections/Blog';
+import Footer from './components/layout/Footer';
 
 const SECTION_IDS = [
   "home",
@@ -64,6 +65,7 @@ export default function App() {
           <Blog />
         </main>
 
+        <Footer />
       </div>
 
       <MobileNav
