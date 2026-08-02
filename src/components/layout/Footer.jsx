@@ -1,4 +1,4 @@
-import { footerMenuColumns } from "../../data/footerLinks.js"
+import { footerMenuColumns, footerSocialLinks } from "../../data/footerLinks.js"
 
 
 
@@ -55,8 +55,27 @@ const Footer = () => {
                 ))}
               </nav>
 
-              <div>
+              <div className="flex flex-col items-center gap-10 py-[25px] text-center sm:flex-row sm:justify-between sm:pb-[34px] sm:text-left">
+                <div className="flex items-center gap-5">
+                  {footerSocialLinks.map((social) => (
+                    <a
+                      href={social.href}
+                      key={social.icon}
+                      aria-label={social.label}
+                      className="text-base text-ink transition-colors duration-500 hover:text-[#bff747]"
+                    >
+                      <span className={social.icon} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
 
+                <p className="capitalize text-ink">
+                  Copyright © {year} . {" "}
+                  <a href="#home" className="text-ink font-bold transition-colors duration-500 hover:text-[#bff747]">
+                    Truesocial Digital . {" "}
+                  </a>
+                  All rights Reserved.
+                </p>
               </div>
             </div>
           </div>
