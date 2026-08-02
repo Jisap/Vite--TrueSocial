@@ -60,21 +60,31 @@ const Blog = () => {
 
                       <div className='relative block flex-1'>
                         <div className='flex items-center gap-5'>
-                          {post.category}
+                          <span>{post.category}</span>
+                          <span className='block h-[5px] w-[56px] rounded-full bg-ink' aria-hidden="true" />
+                          <p>{post.date}</p>
                         </div>
 
-                        <span className='block h-[5px] rounded-full bg-ink' aria-hidden="true" />
+                        <h3 className='mb-2 mt-1 font-sans text-2xl font-bold capitalize leading-[34px]'>
+                          <a href="#" className='text-ink transition-colors duration-500 hover:text-[#bff747]'>
+                            {post.title}
+                          </a>
+                        </h3>
 
-                        <p>
-                          {post.date}
+                        <p className='mb-[19px] capitalize'>
+                          {post.excerpt}
                         </p>
-                      </div>
 
-                      <h3 className='mb-2 mt-1 font-sans text-2xl font-bold capitalize leading-[34px]'>
-                        <a href="#" className='text-ink transition-colors duration-500 hover:text-[#bff747]'>
-                          {post.title}
-                        </a>
-                      </h3>
+                        <div className='relative inline-block'>
+                          <a href="#" className='relative flex items-center gap-[6px] font-bold capitalize text-ink transition-colors duration-500
+                          before:absolute before:bottom-0 before:left-0 before:right-[3px] before:h-px before:bg-ink before:transition-colors 
+                          before:duration-500 before:content-[""] hover:text-[#bff747] hover:before:bg-[#bff747]'
+                          >
+                            Read More
+                            <span className='icon-arrow-up-right text-lg font-bold' aria-hidden="true"></span>
+                          </a>
+                        </div>
+                      </div>
                     </article>
                   </Reveal>
                 ))}
