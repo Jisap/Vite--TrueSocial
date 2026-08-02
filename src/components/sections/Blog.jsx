@@ -1,10 +1,14 @@
 import React from 'react'
 import SectionTitle from '../common/SectionTitle'
+import Reveal from '../common/Reveal'
+import { blogPosts } from "../../data/blogPosts.js"
+
+
 
 const Blog = () => {
   return (
     <section className='relative z-[1] block py-20 pb-[50px] sm:py-[120px] sm:pb-[90px]' id="blog">
-      <div className='absolute bottom-[256px] left-10 -z-10 hidden xl:block' aria-hidden="true">
+      <div className='absolute bottom-[265px] left-10 -z-10 hidden xl:block' aria-hidden="true">
         <img
           src="/assets/images/shapes/blog-one-shape-1.png"
           alt=""
@@ -24,8 +28,43 @@ const Blog = () => {
               />
 
               <div className='relative inline-block'>
-                <a href="#blog" className='relative'></a>
+                <a href="#blog" className='relative flex items-center gap-[6px] font-bold text-ink transition-colors duration-500 before:absolute
+                 before:bottom-0 before:left-0 before:right-[3px] before:h-px before:bg-ink before:transition-colors before:duration-500 before:content-[""] 
+                 hover:before:bg-[#bff747]'
+                >
+                  View All Articles
+                  <span className='icon-arrow-up-right text-lg font-bold' aria-hidden='true'></span>
+                </a>
               </div>
+            </div>
+          </div>
+
+          <div className='xl:col-span-7'>
+            <div className='relative mx-auto mt-[50px] block max-w-[600px] xl:mx-0 xl:ml-6 xl:mt-0 xl:max-w-none'>
+              <ul className='m-0 flex list-none flex-col gap-[30px] p-0'>
+                {blogPosts.map((post) => (
+                  <Reveal key={post.id} animation="fade-in-up" delay={post.delay}>
+                    <article className='group relative flex flex-col items-baseline gap-[30px] border border-border p-[19px] sm:flex-row sm:items-center'>
+                      <div className='relative block w-full max-w-[190px]'>
+                        <div className='relative block overflow-hidden before:absolute before:inset-0 before:z-[1] before:translate-y-[50px]
+                        before:bg-ink/[.69] before:transition-all before:duration-700 before:content-[""] gorup-hover:before:translate-y-0
+                        group-hover:before:opacity-100'
+                        >
+                          <img
+                            src={post.image}
+                            alt=""
+                            className='w-full transition-transform duration-100 ease-in-out group-hover:scale-105'
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+
+                      </div>
+                    </article>
+                  </Reveal>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
