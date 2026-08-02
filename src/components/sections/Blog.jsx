@@ -55,6 +55,13 @@ const Blog = () => {
                             alt=""
                             className='w-full transition-transform duration-100 ease-in-out group-hover:scale-105'
                           />
+                          <a
+                            href="#"
+                            className='absolute inset-0 z-[2] flex items-center justify-center text-[#bff747] opacity-0 transition-opacity duration-500 group-hover:opacity-100'
+                            aria-label={post.title}
+                          >
+                            <span className='icon-arrow-up-right text-2xl font-bold' aria-hidden="true" />
+                          </a>
                         </div>
                       </div>
 
