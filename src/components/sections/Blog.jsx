@@ -46,7 +46,7 @@ const Blog = () => {
                   <Reveal key={post.id} animation="fade-in-up" delay={post.delay}>
                     <article className='group relative flex flex-col items-baseline gap-[30px] border border-border p-[19px] sm:flex-row sm:items-center'>
                       <div className='relative block w-full max-w-[190px]'>
-                        <div className='relative block overflow-hidden before:absolute before:inset-0 before:z-[1] before:translate-y-[50px]
+                        <div className='relative block overflow-hidden before:absolute before:inset-0 before:z-[1] before:opacity-0 before:translate-y-[50px]
                         before:bg-ink/[.69] before:transition-all before:duration-700 before:content-[""] group-hover:before:translate-y-0
                         group-hover:before:opacity-100'
                         >
@@ -77,8 +77,8 @@ const Blog = () => {
 
                         <div className='relative inline-block'>
                           <a href="#" className='relative flex items-center gap-[6px] font-bold capitalize text-ink transition-colors duration-500
-                          before:absolute before:bottom-0 before:left-0 before:right-[3px] before:h-px before:bg-ink before:transition-colors 
-                          before:duration-500 before:content-[""] hover:text-[#bff747] hover:before:bg-[#bff747]'
+                          before:absolute before:bottom-0 before:left-0 before:right-[3px] before:h-px before:bg-[#bff747] before:transition-all 
+                          before:duration-500 before:content-[""] before:opacity-0 hover:text-[#bff747] hover:before:opacity-100'
                           >
                             Read More
                             <span className='icon-arrow-up-right text-lg font-bold' aria-hidden="true"></span>
