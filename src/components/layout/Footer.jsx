@@ -19,7 +19,7 @@ const Footer = () => {
                   Something Great
                 </h2>
 
-                <p className="">
+                <p className="mt-8">
                   We shift you from today&apos;s reality to tomorrow&apos;s potential, ensuring.
                 </p>
               </div>
